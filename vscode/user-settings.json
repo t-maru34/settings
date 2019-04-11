@@ -1,0 +1,104 @@
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 15,
+  "editor.quickSuggestionsDelay": 200,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.renderWhitespace": "all",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "telemetry.enableCrashReporter": false,
+  "breadcrumbs.enabled": true,
+  "update.mode": "manual",
+
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+
+  // vscodevim Settings
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<D-c>": false
+  },
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-j>"],
+      "after": [5, "j"]
+    },
+    {
+      "before": ["<C-h>"],
+      "after": [5, "h"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": [5, "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": [5, "l"]
+    },
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z"]
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<C-j>"],
+      "after": [5, "j"]
+    },
+    {
+      "before": ["<C-h>"],
+      "after": [5, "h"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": [5, "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": [5, "l"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["<C-j>"],
+      "after": ["Down"]
+    },
+    {
+      "before": ["<C-h>"],
+      "after": ["Left"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["Up"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["Right"]
+    }
+  ],
+
+  // Auto Rename Tag Settings
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "xml"
+  ],
+
+  // ESLint Settings
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript"
+  ]
+}
