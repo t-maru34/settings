@@ -1,0 +1,20 @@
+[user]
+  name = <user-name>
+  email = <email>
+
+[core]
+  editor = vim
+
+[alias]
+  st = status
+  br = branch
+  co = checkout
+  cm = commit
+  ad = add
+  df = diff
+  gr = log --graph --date=short --all --format=\"%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %s %C(cyan)@%an%C(reset)\"
+
+#driver for merging Xcode project files
+[merge "mergepbx"]
+  name = Xcode project files merger
+  driver = mergepbx %O %A %B
