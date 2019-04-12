@@ -16,7 +16,7 @@
   "update.mode": "manual",
 
   "extensions.autoUpdate": false,
-  "extensions.autoCheckUpdates": false,
+  "extensions.autoCheckUpdates": true,
 
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
