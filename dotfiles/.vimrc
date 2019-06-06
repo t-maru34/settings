@@ -4,6 +4,7 @@ set shiftwidth=2
 set softtabstop=2
 " set autoindent
 " set smartindent
+syntax enable
 
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
