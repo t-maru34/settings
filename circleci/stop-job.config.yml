@@ -1,0 +1,66 @@
+version: 2.1
+
+commands:
+  detect-file-changes:
+    description: "Stop the job when the files in directory have not been changed. However, the master branch not affected."
+    parameters:
+      target-directory:
+        description: "Check target directory"
+        type: enum
+        enum: ["xxx", "yyy", "zzz"]
+    steps:
+      - run:
+          name: Detect file changes
+          command: |
+            echo "current branch -> ${CIRCLE_BRANCH}"
+            if [ $CIRCLE_BRANCH = "master" ]; then
+              echo "The master branch not affected."
+            else
+              MASTER_LAST_COMMIT=$(git log -1 origin/master --format=format:%H --full-diff <<parameters.target-directory>>)
+              CURRENT_COMMIT=$(git log -1 --format=format:%H --full-diff <<parameters.target-directory>>)
+              echo "master last commit on <<parameters.directory>> -> ${MASTER_LAST_COMMIT}"
+              echo "current commit on <<parameters.directory>> -> ${CURRENT_COMMIT}"
+              if [ $MASTER_LAST_COMMIT = $CURRENT_COMMIT ]; then
+                echo "No file changed. Stop the job."
+                circleci-agent step halt
+              else
+                echo "File has been changed."
+              fi
+            fi
+
+jobs:
+  build-xxx:
+    docker:
+      - image: circleci/node:8
+
+    steps:
+      - checkout
+
+      - detect-file-changes:
+          target-directory: "xxx"
+
+      - restore_cache:
+          keys:
+            - v1-npm-deps-{{ .Branch }}-{{ checksum "xxx/package-lock.json" }}
+            - v1-npm-deps-
+
+      - run:
+          name: Download Dependencies
+          working_directory: xxx
+          command: npm install
+
+      - save_cache:
+          key: v1-npm-deps-{{ .Branch }}-{{ checksum "xxx/package-lock.json" }}
+          paths:
+            - xxx/node_modules
+
+      - run:
+          name: Some command
+          working_directory: xxx
+          command: echo "Some command exec."
+
+workflow:
+  version: 2
+  build:
+    jobs:
+      - build-xxx
