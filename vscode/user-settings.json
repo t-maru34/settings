@@ -20,8 +20,14 @@
   "extensions.autoCheckUpdates": true,
   "extensions.ignoreRecommendations": false,
 
+  "explorer.autoReveal": false,
+
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
+
+  // Prettier Settings
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 140,
 
   // vscodevim Settings
   "vim.handleKeys": {
@@ -115,6 +121,7 @@
   // Code Spell Checker Settings
   "cSpell.userWords": [
     "firestore",
-    "ngrx"
+    "ngrx",
+    "selectable"
   ]
 }
