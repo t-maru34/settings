@@ -22,6 +22,9 @@
 
   "explorer.autoReveal": false,
 
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
 
@@ -107,14 +110,21 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "typescript"
+    "typescript",
+    "typescriptreact"
   ],
 
   // Language Settings
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
@@ -123,5 +133,7 @@
     "firestore",
     "ngrx",
     "selectable"
-  ]
+  ],
+
+  "vsicons.projectDetection.disableDetect": true
 }
