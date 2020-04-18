@@ -62,6 +62,10 @@
     {
       "before": ["N"],
       "after": ["N", "z", "z"]
+    },
+    {
+      "before": ["v"],
+      "after": ["V"]
     }
   ],
   "vim.visualModeKeyBindings": [
