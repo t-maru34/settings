@@ -13,6 +13,7 @@
   "files.insertFinalNewline": true,
   "files.eol": "\n",
   "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
   "breadcrumbs.enabled": true,
   "update.mode": "manual",
 
@@ -135,5 +136,10 @@
     "selectable"
   ],
 
-  "vsicons.projectDetection.disableDetect": true
+  "vsicons.projectDetection.disableDetect": true,
+
+  "workbench.colorCustomizations": {
+    "editorSuggestWidget.selectedBackground": "#455A64",
+    "tab.activeBorder": "#ffffff"
+  }
 }
