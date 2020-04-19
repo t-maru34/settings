@@ -17,5 +17,23 @@
     "key": "ctrl+k",
     "command": "selectPrevSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "tab",
+    "command": "editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "shift+tab",
+    "command": "editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+shift+cmd+h",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+shift+cmd+l",
+    "command": "workbench.action.nextEditor"
   }
 ]
