@@ -29,6 +29,8 @@
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
 
+  "npm.enableScriptExplorer": true,
+
   // Prettier Settings
   "prettier.singleQuote": true,
   "prettier.printWidth": 140,
@@ -145,5 +147,9 @@
   "workbench.colorCustomizations": {
     "editorSuggestWidget.selectedBackground": "#455A64",
     "tab.activeBorder": "#ffffff"
-  }
+  },
+
+  // vsintellicode Settings
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
