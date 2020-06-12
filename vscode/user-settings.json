@@ -28,6 +28,7 @@
 
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
+  "typescript.surveys.enabled": false,
 
   "npm.enableScriptExplorer": true,
 
@@ -64,10 +65,6 @@
     {
       "before": ["N"],
       "after": ["N", "z", "z"]
-    },
-    {
-      "before": ["v"],
-      "after": ["V"]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -119,6 +116,11 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
   ],
 
   // Language Settings
